@@ -11,7 +11,7 @@ public class Shop : MonoBehaviour
     GameObject clickScript;
     [SerializeField] private Click clc;
     public Text firstPriceText;
-    public Text thirdPriceText;
+    //public Text thirdPriceText;
     public Text fourthPriceText;
     public Text fifthPriceText;
     public int firstPrice;
@@ -75,37 +75,37 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void ThirdProduct()
-    {
-        int basePrice = 40;
-        if (counter3 == 0 && points >= basePrice)
-        {
-            points = points - basePrice;
-            counter3++;
+    //public void ThirdProduct()
+    //{
+    //    int basePrice = 40;
+    //    if (counter3 == 0 && points >= basePrice)
+    //    {
+    //        points = points - basePrice;
+    //        counter3++;
 
-            PlayerPrefs.SetInt("counter3", counter3);
-            PlayerPrefs.SetInt("points", points);
+    //        PlayerPrefs.SetInt("counter3", counter3);
+    //        PlayerPrefs.SetInt("points", points);
 
-            isDoubleClick = true;
-            PlayerPrefs.SetInt("isDoubleClick", isDoubleClick ? 1 : 0);
+    //        isDoubleClick = true;
+    //        PlayerPrefs.SetInt("isDoubleClick", isDoubleClick ? 1 : 0);
 
-            thirdPriceText.text = basePrice.ToString();
-        }
-        else if (counter3 > 0 && points >= basePrice)
-        {
-            int price = Factor(basePrice, counter3);
-            points = points - price;
-            counter3++;
+    //        thirdPriceText.text = basePrice.ToString();
+    //    }
+    //    else if (counter3 > 0 && points >= basePrice)
+    //    {
+    //        int price = Factor(basePrice, counter3);
+    //        points = points - price;
+    //        counter3++;
 
-            PlayerPrefs.SetInt("counter3", counter3);
-            PlayerPrefs.SetInt("points", points);
+    //        PlayerPrefs.SetInt("counter3", counter3);
+    //        PlayerPrefs.SetInt("points", points);
 
-            isDoubleClick = true;
-            PlayerPrefs.SetInt("isDoubleClick", isDoubleClick ? 1 : 0);
+    //        isDoubleClick = true;
+    //        PlayerPrefs.SetInt("isDoubleClick", isDoubleClick ? 1 : 0);
 
-            thirdPriceText.text = Factor(basePrice, counter3).ToString();
-        }
-    }
+    //        thirdPriceText.text = Factor(basePrice, counter3).ToString();
+    //    }
+    //}
 
     void Update()
     {

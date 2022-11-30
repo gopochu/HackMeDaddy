@@ -2084,7 +2084,6 @@ MonoBehaviour:
   totalPoints: 0
   clc: {fileID: 425671897}
   firstPriceText: {fileID: 0}
-  thirdPriceText: {fileID: 694299373}
   fourthPriceText: {fileID: 0}
   fifthPriceText: {fileID: 0}
   firstPrice: 0

@@ -39,15 +39,12 @@ public class Click : MonoBehaviour
             PlayerPrefs.SetInt("totalPoints", totalPoints);
         }
     }
-    //a to z + space + enter + backspace + 0 to 9
-    // Update is called once per frame
     void Update()
     {
         if (Input.anyKeyDown)
         {
             ButtonClick();
         }
-        //points = PlayerPrefs.GetInt("points");
         pointsText.text = points.ToString();
         isDoubleClick = PlayerPrefs.GetInt("isDoubleClick") == 1 ? true : false;
     }

@@ -978,57 +978,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.94}
   m_SizeDelta: {x: 401.08, y: 65.78}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &796551737
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 796551739}
-  - component: {fileID: 796551738}
-  m_Layer: 0
-  m_Name: secondShopButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &796551738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796551737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e415ba7fc3b16f4b8aaa6efa4a9486f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  secondPrice: 20
-  counter2: 0
-  secondPriceText: {fileID: 809414800}
-  points: 0
-  isPassivePlus: 0
-  passivePlus: 0
-  clc: {fileID: 425671897}
---- !u!4 &796551739
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 796551737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1673313, y: 0.21051064, z: 88.38948}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &809414797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,7 +1267,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 796551738}
+      - m_Target: {fileID: 1378636624}
         m_TargetAssemblyTypeName: secondShopButton, Assembly-CSharp
         m_MethodName: SecondProduct
         m_Mode: 1
@@ -1368,6 +1317,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152025131}
   m_CullTransparentMesh: 1
+--- !u!1 &1240586194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240586196}
+  - component: {fileID: 1240586195}
+  m_Layer: 0
+  m_Name: thirdShopButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1240586195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240586194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8f579a58063f4943a473d4dc599d3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDoubleClick: 0
+  points: 0
+  counter3: 0
+  thirdPrice: 0
+  thirdPriceText: {fileID: 694299373}
+  isFirstBuy: 0
+  plusCounter: 0
+--- !u!4 &1240586196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240586194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16851965, y: -0.28880236, z: 0.036613263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1267465403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1444,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267465403}
   m_CullTransparentMesh: 1
+--- !u!1 &1378636623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1378636625}
+  - component: {fileID: 1378636624}
+  m_Layer: 0
+  m_Name: secondShopButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1378636624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378636623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e415ba7fc3b16f4b8aaa6efa4a9486f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secondPrice: 0
+  counter2: 0
+  secondPriceText: {fileID: 809414800}
+  points: 0
+  isPassivePlus: 0
+  passivePlus: 0
+  clc: {fileID: 0}
+  firstBuy: 0
+--- !u!4 &1378636625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378636623}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.16851965, y: -0.28880236, z: 0.036613263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1596595145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,8 +2212,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2086032785}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
+      - m_Target: {fileID: 1240586195}
+        m_TargetAssemblyTypeName: thirdShopButton, Assembly-CSharp
         m_MethodName: ThirdProduct
         m_Mode: 1
         m_Arguments:

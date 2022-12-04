@@ -6,18 +6,29 @@ using UnityEngine.UI;
 public class secondShopButton : MonoBehaviour
 {
     public int secondPrice;
-    public int counter2 = 20;
+    public int counter2;
     public Text secondPriceText;
     [SerializeField] public int points;
     [SerializeField] bool isPassivePlus;
     [SerializeField] public int passivePlus;
     [SerializeField] private Click clc;
     GameObject clickScript;
+    public bool firstBuy;
+    int basePrice = 20;
     void Start()
     {
+        firstBuy = PlayerPrefs.GetInt("firstBuy") == 1 ? true : false;
+        secondPrice = PlayerPrefs.GetInt("secondPrice");
+        if (firstBuy)
+        {
+            secondPriceText.text = secondPrice.ToString();
+        }
+        else
+        {
+            secondPriceText.text = basePrice.ToString();
+        }
         isPassivePlus = PlayerPrefs.GetInt("isPassivePlus") == 1 ? true : false;
         passivePlus = PlayerPrefs.GetInt("passivePlus");
-        secondPrice = PlayerPrefs.GetInt("secondPrice");
         counter2 = PlayerPrefs.GetInt("counter2");
         points = PlayerPrefs.GetInt("points");
         StartCoroutine(PassiveFarm());
@@ -30,23 +41,23 @@ public class secondShopButton : MonoBehaviour
     }
     public void SecondProduct()
     {
-        if (counter2 == 0 && points >= 20)
+        if (counter2 == 0 && points >= basePrice)
         {
-            secondPrice = 20;
-            PlayerPrefs.SetInt("secondPrice", secondPrice);
-
-            points = points - 20;
+            points = points - basePrice;
             PlayerPrefs.SetInt("points", points);
 
             passivePlus++;
             PlayerPrefs.SetInt("passivePlus", passivePlus);
 
-            counter2++;
+            counter2 = counter2 + 2;
             PlayerPrefs.SetInt("counter2", counter2);
 
+            firstBuy = true;
+
+            secondPrice = basePrice;
             secondPrice = Factor(secondPrice, counter2);
-            secondPriceText.text = secondPrice.ToString();
             PlayerPrefs.SetInt("secondPrice", secondPrice);
+            secondPriceText.text = secondPrice.ToString();
 
             StartCoroutine(PassiveFarm());
             clc.UpdatePoints();

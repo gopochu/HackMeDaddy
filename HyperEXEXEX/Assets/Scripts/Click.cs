@@ -10,13 +10,12 @@ public class Click : MonoBehaviour
     public Text pointsText;
     public int totalPoints;
     [SerializeField] public bool isDoubleClick;
-    public int plusCounter;
 
     void Start()
     {
-        PlayerPrefs.GetInt("isDoubleClick", (isDoubleClick ? 1 : 0));
         points = PlayerPrefs.GetInt("points");
-        totalPoints = PlayerPrefs.GetInt("totalPoints");    }
+        totalPoints = PlayerPrefs.GetInt("totalPoints");
+    }
 
     public void UpdatePoints()
     {
@@ -27,7 +26,7 @@ public class Click : MonoBehaviour
     {
         if (isDoubleClick)
         {
-            points = points + plusCounter;
+            points = points + 2;
             totalPoints++;
             PlayerPrefs.SetInt("points", points);
             PlayerPrefs.SetInt("totalPoints", totalPoints);
@@ -48,6 +47,5 @@ public class Click : MonoBehaviour
         }
         pointsText.text = points.ToString();
         isDoubleClick = PlayerPrefs.GetInt("isDoubleClick") == 1 ? true : false;
-        plusCounter = PlayerPrefs.GetInt("plusCounter");
     }
 }

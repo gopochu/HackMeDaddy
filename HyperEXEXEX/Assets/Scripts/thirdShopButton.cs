@@ -60,7 +60,7 @@ public class thirdShopButton : MonoBehaviour
             PlayerPrefs.SetInt("thirdPrice", thirdPrice);
             thirdPriceText.text = thirdPrice.ToString();
         }
-        else if (counter3 > 0 && points >= basePrice)
+        else if (counter3 > 0 && points >= thirdPrice)
         {
             points = points - thirdPrice;
             PlayerPrefs.SetInt("points", points);

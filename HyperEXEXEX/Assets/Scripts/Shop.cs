@@ -16,7 +16,6 @@ public class Shop : MonoBehaviour
     public Text fifthPriceText;
     public int firstPrice;
     public int thirdPrice;
-    [SerializeField] bool isDoubleClick;
     public int counter1;
     public int counter3;
     public int counter4;

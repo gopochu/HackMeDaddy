@@ -719,6 +719,7 @@ MonoBehaviour:
   pointsText: {fileID: 1605482914}
   totalPoints: 0
   isDoubleClick: 0
+  plusCounter: 0
 --- !u!4 &425671898
 Transform:
   m_ObjectHideFlags: 0
@@ -1479,7 +1480,7 @@ MonoBehaviour:
   points: 0
   isPassivePlus: 0
   passivePlus: 0
-  clc: {fileID: 0}
+  clc: {fileID: 425671897}
   firstBuy: 0
 --- !u!4 &1378636625
 Transform:
@@ -2108,7 +2109,6 @@ MonoBehaviour:
   fifthPriceText: {fileID: 0}
   firstPrice: 0
   thirdPrice: 0
-  isDoubleClick: 0
   counter1: 0
   counter3: 0
   counter4: 0

@@ -39,7 +39,7 @@ public class secondShopButton : MonoBehaviour
         double c = Math.Round(Math.Pow(1.3, b));
         return (int)(a * c);
     }
-    public void SecondProduct()
+    public void secondProduct()
     {
         if (counter2 == 0 && points >= basePrice)
         {
@@ -53,6 +53,7 @@ public class secondShopButton : MonoBehaviour
             PlayerPrefs.SetInt("counter2", counter2);
 
             firstBuy = true;
+            PlayerPrefs.SetInt("firstBuy", firstBuy ? 1 : 0);
 
             secondPrice = basePrice;
             secondPrice = Factor(secondPrice, counter2);
@@ -91,7 +92,6 @@ public class secondShopButton : MonoBehaviour
         StartCoroutine(PassiveFarm());
     }
 
-    // Update is called once per frame
     void Update()
     {
         points = PlayerPrefs.GetInt("points");

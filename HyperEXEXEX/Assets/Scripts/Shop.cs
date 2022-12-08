@@ -11,24 +11,15 @@ public class Shop : MonoBehaviour
     GameObject clickScript;
     [SerializeField] private Click clc;
     public Text firstPriceText;
-    //public Text thirdPriceText;
-    public Text fourthPriceText;
-    public Text fifthPriceText;
     public int firstPrice;
     public int thirdPrice;
     public int counter1;
-    public int counter3;
-    public int counter4;
-    public int counter5;
     void Start()
     {
         clc = clickScript.GetComponent<Click>();
         points = PlayerPrefs.GetInt("points");
         totalPoints = PlayerPrefs.GetInt("totalPoints");
         counter1 = PlayerPrefs.GetInt("counter1");
-        counter3 = PlayerPrefs.GetInt("counter3");
-        counter4 = PlayerPrefs.GetInt("counter4");
-        counter5 = PlayerPrefs.GetInt("counter5");
     }
     public int Factor(int a, int b)
     {
@@ -73,38 +64,6 @@ public class Shop : MonoBehaviour
             firstPriceText.text = firstPrice.ToString();
         }
     }
-
-    //public void ThirdProduct()
-    //{
-    //    int basePrice = 40;
-    //    if (counter3 == 0 && points >= basePrice)
-    //    {
-    //        points = points - basePrice;
-    //        counter3++;
-
-    //        PlayerPrefs.SetInt("counter3", counter3);
-    //        PlayerPrefs.SetInt("points", points);
-
-    //        isDoubleClick = true;
-    //        PlayerPrefs.SetInt("isDoubleClick", isDoubleClick ? 1 : 0);
-
-    //        thirdPriceText.text = basePrice.ToString();
-    //    }
-    //    else if (counter3 > 0 && points >= basePrice)
-    //    {
-    //        int price = Factor(basePrice, counter3);
-    //        points = points - price;
-    //        counter3++;
-
-    //        PlayerPrefs.SetInt("counter3", counter3);
-    //        PlayerPrefs.SetInt("points", points);
-
-    //        isDoubleClick = true;
-    //        PlayerPrefs.SetInt("isDoubleClick", isDoubleClick ? 1 : 0);
-
-    //        thirdPriceText.text = Factor(basePrice, counter3).ToString();
-    //    }
-    //}
 
     void Update()
     {

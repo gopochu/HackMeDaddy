@@ -14,7 +14,7 @@ public class secondShopButton : MonoBehaviour
     [SerializeField] private Click clc;
     GameObject clickScript;
     public bool firstBuy;
-    int basePrice = 20;
+    public int basePrice = 20;
     void Start()
     {
         firstBuy = PlayerPrefs.GetInt("firstBuy") == 1 ? true : false;
